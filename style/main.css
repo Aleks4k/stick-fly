@@ -1,0 +1,88 @@
+body {
+	background-image: url('../assets/bg.png');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100% 100%;
+	overflow: hidden;
+	margin-top: 0px;
+}
+
+#stickman {
+	width: 40px;
+	height: 21px;
+	position:absolute;
+	background-image: url('../assets/stickman.png');
+	background-repeat: no-repeat;
+	display: none;
+}
+
+#cloud_layer {
+	width = 100%;
+	bottom: 0;
+	display: none;
+}
+
+#enemy_layer {
+	width = 100%;
+	bottom: 0;
+	display: none;
+}
+
+#score_text {
+	font-size: 29px;
+	font-weight: bold;
+	position:absolute;
+	-webkit-user-select: none; /* Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+/Edge */
+	user-select: none; /* Standard */
+	display: none;
+}
+
+#last_score_text {
+	font-size: 29px;
+	font-weight: bold;
+	margin-top: 8px;
+	color: grey;
+	position:block;
+	-webkit-user-select: none; /* Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+/Edge */
+	user-select: none; /* Standard */
+}
+
+#play_button {
+	display: inline-block;
+	padding: 30px 50px;
+	font-size: 24px;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	outline: none;
+	color: #fff;
+	background-color: #4CAF50;
+	border: none;
+	border-radius: 15px;
+	box-shadow: 0 3px #999;
+	margin-top: 8px;
+}
+
+#play_button:hover {background-color: #3e8e41}
+
+#play_button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 3px #666;
+  transform: translateY(4px);
+}
+
+#tip {
+	display: inline;
+	font-size: 29px;
+	font-weight: bold;
+	margin-top: 8px;
+	color: grey;
+	-webkit-user-select: none; /* Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+/Edge */
+	user-select: none; /* Standard */
+}
