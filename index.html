@@ -3,16 +3,29 @@
 	<head>
 		<title>Stick Fly</title>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+		<link rel="apple-touch-icon" sizes="180x180" href="assets/logo/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="assets/logo/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="assets/logo/favicon-16x16.png">
+		<link rel="manifest" href="assets/logo/site.webmanifest">
 		<link rel="stylesheet" href="style/main.css">
 		<script src = "script/script.js"></script>
+		<script src = "script/joystick.js"></script>
 	</head>
-	<body>
+	<body scroll="no">
 		<button id="play_button" onclick="startGame()">Play</button>
-		<div unselectable="on" id="tip">Use W,S,A,D or Arrow keys to move.</div>
+		<div unselectable="on" id="tip">For PC: Use W,S,A,D or Arrow keys to move.<br>For Phone: Use Joystick to move.</div>
 		<div unselectable="on" id="last_score_text">Last score: 0</div>
+		<div id="cloud_layer"></div>
+		<div id="stickman"></div>
+		<div id="enemy_layer"></div>
+		<div id="rocket_layer"></div>
+		<div id="smoke_layer"></div>
 		<div unselectable="on" id="score_text">Score: 0</div>
-		<div id="cloud_layer">&nbsp;</div>
-		<div id="stickman">&nbsp;</div>
-		<div id="enemy_layer">&nbsp;</div>
+		<div unselectable="on" id="game_tips"></div>
+		<div id="mute_button" onclick="mute()"></div>
+		<div id="fullscreen_button" onclick="toggleFullScreen(true)"></div>
+		<div id="pause_button" onclick="pause()"></div>
+	</body>
 </html>

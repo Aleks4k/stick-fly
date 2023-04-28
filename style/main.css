@@ -1,23 +1,43 @@
 body {
+	width:100%;
 	background-image: url('../assets/bg.png');
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: 100% 100%;
 	overflow: hidden;
 	margin-top: 0px;
+	-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none;  /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+    display: none;
 }
 
 #stickman {
+	position:absolute;
 	width: 40px;
 	height: 21px;
-	position:absolute;
 	background-image: url('../assets/stickman.png');
 	background-repeat: no-repeat;
 	display: none;
 }
 
 #cloud_layer {
-	width = 100%;
+	width: 100%;
+	bottom: 0;
+	display: none;
+}
+
+#smoke_layer {
+	width: 100%;
+	bottom: 0;
+	display: none;
+}
+
+#rocket_layer {
+	width: 100%;
 	bottom: 0;
 	display: none;
 }
@@ -37,6 +57,51 @@ body {
 	-ms-user-select: none; /* IE10+/Edge */
 	user-select: none; /* Standard */
 	display: none;
+}
+
+#fullscreen_button {
+	position:absolute;
+	bottom: 0;
+	left: 0;
+	margin-bottom: 8px;
+	margin-left: 36px;
+	border: 0px;
+	padding: 0px;
+	width: 28px;
+	height: 28px;
+	background-image: url('../assets/buttons/fullscreen.png');
+	background-repeat: no-repeat;
+	display: inline;
+}
+
+#pause_button {
+	position:absolute;
+	top: 0;
+	right: 0;
+	margin-top: 8px;
+	margin-right: 8px;
+	border: 0px;
+	padding: 0px;
+	width: 28px;
+	height: 28px;
+	background-image: url('../assets/buttons/pause.png');
+	background-repeat: no-repeat;
+	display: none;
+}
+
+#mute_button {
+	position:absolute;
+	bottom: 0;
+	left: 0;
+	margin-bottom: 8px;
+	margin-left: 8px;
+	border: 0px;
+	padding: 0px;
+	width: 28px;
+	height: 28px;
+	background-image: url('../assets/buttons/mute.png');
+	background-repeat: no-repeat;
+	display: inline;
 }
 
 #last_score_text {
@@ -85,4 +150,45 @@ body {
 	-moz-user-select: none; /* Firefox */
 	-ms-user-select: none; /* IE10+/Edge */
 	user-select: none; /* Standard */
+}
+
+#game_tips {
+	font-size: 18px;
+	font-weight: bold;
+	position: absolute;
+	right: 0;
+	top: 0;
+	margin-top: 8px;
+	margin-right: 8px;
+	color: grey;
+	-webkit-user-select: none; /* Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+/Edge */
+	user-select: none; /* Standard */
+	display: none;
+}
+
+@-webkit-keyframes glow {
+	from {
+		-webkit-box-shadow:0px 0px 130px 30px rgba(255,0,0,1.0);
+		-moz-box-shadow: 0px 0px 130px 30px rgba(255,0,0,1.0);
+		box-shadow: 0px 0px 130px 30px rgba(255,41,0,1.0);
+	}
+	to {
+		-webkit-box-shadow:0px 0px 50px 30px rgba(255,0,0,1.0);
+		-moz-box-shadow: 0px 0px 50px 30px rgba(255,0,0,1.0);
+		box-shadow: 0px 0px 50px 30px rgba(255,0,0,1.0);
+	}
+}
+
+@-webkit-keyframes fadeOut {
+	from {
+		opacity: 1;
+		width: 23px;
+		height: 20px;
+	} to {
+		width: 57px;
+		height: 53px;
+		opacity: 0;
+	}
 }
